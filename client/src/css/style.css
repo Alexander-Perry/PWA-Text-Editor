@@ -191,7 +191,6 @@ h1 {
 .btn.btn-link:hover {
   background-color: #31a9e1;
 }
-
 @media only screen and (max-width: 600px) {
   .nav-btn {
     display: none;
@@ -207,5 +206,11 @@ h1 {
 
   h1 {
     font-size: 18px;
+  }
+}
+
+@media all and (display-mode: standalone){
+  #buttonInstall{
+    display: none;
   }
 }
