@@ -19,11 +19,12 @@ const pageCache = new CacheFirst({
   ],
 });
 
+// offline fallback
 warmStrategyCache({
   urls: ['/index.html', '/'],
   strategy: pageCache,
 });
 
+// registerRoutes for caching
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
-
 registerRoute(({ request }) => ['style', 'script', 'worker'].includes(request.destination),  pageCache);
